@@ -1,0 +1,32 @@
+{
+  "originHash" : "0e62cb8eeae781e7469d444dace47b09566f18c6d5bfae709cc54b8f85ddb9dd",
+  "pins" : [
+    {
+      "identity" : "google-cloud-service-context",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rosecoder/google-cloud-service-context.git",
+      "state" : {
+        "revision" : "5464a8beb9b4d4d93cc219313b207bd82cc128bb"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "9cb486020ebf03bfa5b5df985387a14a98744537",
+        "version" : "1.6.1"
+      }
+    },
+    {
+      "identity" : "swift-service-context",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-service-context.git",
+      "state" : {
+        "revision" : "0c62c5b4601d6c125050b5c3a97f20cce881d32b",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
