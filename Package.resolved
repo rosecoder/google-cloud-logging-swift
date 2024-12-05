@@ -1,11 +1,12 @@
 {
-  "originHash" : "0e62cb8eeae781e7469d444dace47b09566f18c6d5bfae709cc54b8f85ddb9dd",
+  "originHash" : "4cd3e5db449e300a3173163787c4224cdba0a1ebb6ce1540d5a8d6301b5c0d6e",
   "pins" : [
     {
       "identity" : "google-cloud-service-context",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rosecoder/google-cloud-service-context.git",
       "state" : {
+        "branch" : "main",
         "revision" : "5464a8beb9b4d4d93cc219313b207bd82cc128bb"
       }
     },
