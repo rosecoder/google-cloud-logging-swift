@@ -50,20 +50,22 @@ public struct GoogleCloudLogHandler: LogHandler {
             }
         }
 
-        do {
-            try SidecarLog(
-                date: now,
-                level: level,
-                message: message,
-                labels: labels,
-                source: source,
-                context: .current ?? .topLevel,
-                file: file,
-                function: function,
-                line: line
-            ).write()
-        } catch {
-            print("Error writing log: \(error)")
+        Task(priority: .background) {
+            do {
+                try await SidecarLog(
+                    date: now,
+                    level: level,
+                    message: message,
+                    labels: labels,
+                    source: source,
+                    context: .current ?? .topLevel,
+                    file: file,
+                    function: function,
+                    line: line
+                ).write()
+            } catch {
+                print("Error writing log: \(error)")
+            }
         }
     }
 }

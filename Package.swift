@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
-        .package(url: "https://github.com/rosecoder/google-cloud-service-context.git", branch: "main"),
+        .package(url: "https://github.com/rosecoder/google-cloud-service-context.git", from: "0.0.2"),
     ],
     targets: [
         .target(

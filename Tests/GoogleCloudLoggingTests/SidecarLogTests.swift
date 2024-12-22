@@ -8,7 +8,7 @@ import GoogleCloudServiceContext
 @Suite struct SidecarLogTests {
 
     @Test func format() async throws {
-        let log = SidecarLog(
+        let log = await SidecarLog(
             date: Date(),
             level: .info,
             message: "Test",
@@ -38,7 +38,7 @@ import GoogleCloudServiceContext
         context.trace = .init(id: 1, spanIDs: [2], isSampled: false)
         
         for level in Logger.Level.allCases {
-            try SidecarLog(
+            try await SidecarLog(
                 date: Date(),
                 level: level,
                 message: "Test",

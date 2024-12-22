@@ -37,7 +37,7 @@ struct SidecarLog: Encodable {
         file: String,
         function: String,
         line: UInt
-    ) {
+    ) async {
         self.time = Self.timeDateFormatter.string(from: date)
 
         switch level {
@@ -65,7 +65,7 @@ struct SidecarLog: Encodable {
 
         self.sourceLocation = .init(file: file, line: String(line), function: function)
 
-        if let trace = context.trace, let projectID = context.projectID {
+        if let trace = context.trace, let projectID = await context.projectID {
             self.trace = "projects/\(projectID)/traces/\(trace.id.prefixedHexRepresentation)"
             self.spanID = trace.spanIDs.last?.prefixedHexRepresentation
             self.traceSampled = trace.isSampled == true
